@@ -41,7 +41,3 @@ Run from the directory containing `mujoco_menagerie/`. Tested on MuJoCo 3.12.
 The notebook neutralises the Menagerie position actuators by zeroing their gain and bias parameters, then drives the arm through `qfrc_applied`. For a project that needs actuator saturation modelled, copy `panda.xml` and replace the `<position>` block with `<motor>` entries carrying the datasheet `ctrlrange`.
 
 `mj_mulM` handles the mass-matrix product instead of `mj_fullM`, since the internal storage of `qM` changed across MuJoCo 3.x releases.
-
-## Next
-
-Task-space control: end-effector Jacobian from `mj_jacSite`, damped least squares inverse kinematics, and a mocap target you drag in the viewer.
